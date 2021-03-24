@@ -1,0 +1,4 @@
+module CKSwiftXX {
+  header "CKSwiftXX.h"
+  requires cplusplus
+}
