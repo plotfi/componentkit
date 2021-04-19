@@ -86,7 +86,7 @@
 #include <ComponentKit/CKComponentScopeEnumeratorProvider.h>
 #include <ComponentKit/CKDataSourceStateModifying.h>
 #include <ComponentTextKit/CKTextKitRenderer+TextChecking.h>
-// #include <RenderCore/RCComponentDescriptionHelper.h>
+#include <RenderCore/RCComponentDescriptionHelper.h>
 // #include <ComponentKit/CKImageComponent.h>
 #include <ComponentKit/CKBuildComponentResult.h>
 #include <ComponentKit/CKChangesetUpdateConfiguration.h>
