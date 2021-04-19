@@ -103,7 +103,7 @@
 // #include <ComponentKit/CKAutoSizedImageComponent.h>
 #include <ComponentKit/CKComponentControllerHelper.h>
 #include <ComponentKit/CKComponentControllerEvents.h>
-// #include <ComponentKit/CKComponentAccessibility.h>
+#include <ComponentKit/CKComponentAccessibility.h>
 // #include <ComponentKit/CKNetworkImageComponent.h>
 #include <ComponentKit/CKBaseSpecContext.h>
 #include <ComponentKit/CKDataSourceConfiguration.h>
