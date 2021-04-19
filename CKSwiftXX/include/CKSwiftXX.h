@@ -94,7 +94,7 @@
 #include <ComponentKit/CKComponentAnnouncerBaseInternal.h>
 #include <ComponentKit/CKStatefulViewReusePool.h>
 #include <ComponentKit/CKExceptionInfoScopedValue.h>
-// #include <ComponentKit/CKComponentHierarchyDebugHelper.h>
+#include <ComponentKit/CKComponentHierarchyDebugHelper.h>
 #include <ComponentKit/CKDataSourceItem.h>
 #include <ComponentKit/CKDataSourceChangesetVerification.h>
 #include <ComponentKit/CKTransitions.h>
