@@ -1,6 +1,9 @@
 import Foundation
 import CKSwiftXX
 
+import std.vector
+import std.unordered_map
+
 let IsCoalescedModeVal = CK.IsCoalescedMode()
 CK.CoalescedWillRenderRenderComponent(IsCoalescedModeVal)
 CK.CoalescedDidRenderRenderComponent()

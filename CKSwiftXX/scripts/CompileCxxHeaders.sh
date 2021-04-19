@@ -1,7 +1,8 @@
 export IOS_VERSION=14.4
 
-$SWIFT_BUILD_PATH/bin/swift-frontend \
+$SWIFT_BUILD_PATH/bin/swift -frontend \
   -S -emit-ir \
+  -disable-implicit-concurrency-module-import \
   -enable-cxx-interop -enable-objc-interop \
   -target arm64-apple-ios$IOS_VERSION  -target-sdk-version $IOS_VERSION \
   -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS$IOS_VERSION.sdk \
@@ -42,4 +43,4 @@ $SWIFT_BUILD_PATH/bin/swift-frontend \
   -I./ComponentKit/Analytics/ComponentKit \
   -I./ComponentKit/Debug/ComponentKit \
   -I./RenderCoreLayoutCaching/RenderCoreLayoutCaching \
-  -primary-file ./CKSwiftXX/Swift/main.swift
+  -module-name main ./CKSwiftXX/Swift/main.swift

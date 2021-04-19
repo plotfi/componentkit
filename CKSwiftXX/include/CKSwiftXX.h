@@ -37,7 +37,7 @@
 
 #include <RenderCore/RCFatal.h>
 #include <ComponentKit/CKTraitCollectionHelper.h>
-// #include <ComponentKit/CKComponentViewConfiguration.h>
+#include <ComponentKit/CKComponentViewConfiguration.h>
 #include <ComponentKit/ComponentUtilities.h>
 #include <ComponentKit/CKIndexSetDescription.h>
 #include <ComponentKit/CKDataSourceQOSHelper.h>
@@ -58,7 +58,7 @@
 // #include <ComponentKit/CKInspectableView.h>
 #include <RenderCore/RCDispatch.h>
 #include <ComponentKit/CKCategorizable.h>
-// #include <ComponentKit/CKComponentViewConfiguration_SwiftBridge+Internal.h>
+#include <ComponentKit/CKComponentViewConfiguration_SwiftBridge+Internal.h>
 #include <ComponentKit/CKSizeRange_SwiftBridge+Internal.h>
 #include <ComponentKit/RCComponentSize_SwiftBridge+Internal.h>
 #include <ComponentKit/RCDimension_SwiftBridge+Internal.h>
@@ -76,7 +76,8 @@
 #include <ComponentTextKit/CKTextComponentLayerHighlighter.h>
 #include <ComponentKit/CKBuildTrigger.h>
 // #include <ComponentKit/CKAnalyticsListenerHelpers.h>
-// #include <ComponentKit/CKComponentGestureActionsInternal.h>
+#include <ComponentKit/CKComponentGestureActionHelper.h>
+#include <ComponentKit/CKComponentGestureActionsInternal.h>
 #include <ComponentKit/CKSupplementaryViewDataSource.h>
 #include <ComponentKit/CKDataSourceItemInternal.h>
 // #include <ComponentKit/CKDataSourceModificationHelper.h>
@@ -128,7 +129,6 @@
 // #include <ComponentTextKit/CKTextComponent.h>
 #include <ComponentTextKit/CKAsyncLayerInternal.h>
 #include <ComponentKit/CKNetworkImageDownloading.h>
-#include <ComponentKit/CKComponentGestureActionHelper.h>
 #include <ComponentKit/CKTreeVerificationHelpers.h>
 #include <ComponentKit/CKComponentBoundsAnimation+UICollectionView.h>
 // #include <ComponentKit/CKCellDeallocUnmounter.h>
@@ -137,17 +137,17 @@
 // #include <ComponentKit/CKComponentAttachControllerInternal.h>
 #include <ComponentTextKit/CKTextKitContext.h>
 #include <ComponentTextKit/CKHighlightOverlayLayer.h>
-// #include <RenderCoreLayoutCaching/RCComputeRootLayout.h>
-// #include <ComponentKit/CKSystraceScope.h>
+#include <RenderCoreLayoutCaching/RCComputeRootLayout.h>
+#include <ComponentKit/CKSystraceScope.h>
 #include <ComponentKit/CKComponentTreeDiff.h>
 #include <ComponentKit/CKComponentPerfScope.h>
-// #include <ComponentKit/CKAsyncBlock.h>
+#include <ComponentKit/CKAsyncBlock.h>
 #include <ComponentKit/CKComponentDelegateForwarder.h>
 // #include <ComponentKit/CKComponentEvents.h>
 // #include <ComponentKit/CKRenderComponent.h>
 #include <RenderCore/RCGeometryHelpers.h>
 #include <ComponentKit/CKComponentGestureActions.h>
-// #include <ComponentKit/CKIterableHelpers.h>
+#include <ComponentKit/CKIterableHelpers.h>
 #include <ComponentKit/CKBuildComponentTreeParams.h>
 #include <ComponentKit/CKTreeNodeProtocol.h>
 #include <ComponentKit/CKOptimisticViewMutations.h>
@@ -159,7 +159,7 @@
 // #include <ComponentKit/CKAnimationApplicator.h>
 #include <ComponentKit/CKRootTreeNode.h>
 #include <ComponentKit/CKDataSourceChangesetApplicator.h>
-// #include <RenderCore/CKMountableHelpers.h>
+#include <RenderCore/CKMountableHelpers.h>
 // #include <ComponentKit/CKStaticLayoutComponent.h>
 #include <ComponentKit/CKDataSourceAppliedChanges.h>
 #include <ComponentKit/CKIdValueWrapperInternal.h>
@@ -185,10 +185,11 @@
 #include <ComponentKit/CKDataSourceListener.h>
 #include <ComponentKit/CKDataSourceInternal.h>
 #include <ComponentTextKit/CKAsyncTransactionContainer.h>
+// Require React Native ./ReactCommon/yoga/yoga/Yoga.h
 // #include <ComponentKit/CKComponent+Yoga.h>
 #include <ComponentTextKit/CKAsyncLayer.h>
 #include <RenderCore/CKGlobalConfig.h>
-// #include <RenderCore/ComponentMountContext.h>
+#include <RenderCore/ComponentMountContext.h>
 // #include <ComponentKit/OverlayLayoutComponentBuilder.h>
 #include <ComponentKit/CKThreadLocalComponentScope.h>
 #include <RenderCore/CKDelayedInitialisationWrapper.h>
@@ -197,9 +198,9 @@
 // #include <ComponentKit/SizingComponentBuilder.h>
 #include <ComponentKit/ComponentLayoutContext.h>
 #include <ComponentTextKit/CKTextKitRenderer.h>
-// #include <RenderCore/RCLayout.h>
+#include <RenderCore/RCLayout.h>
 #include <RenderCore/RCComponentSize.h>
-// #include <ComponentKit/CKIndexTransform.h>
+#include <ComponentKit/CKIndexTransform.h>
 // #include <ComponentKit/CKComponent.h>
 // #include <ComponentKit/BackgroundLayoutComponentBuilder.h>
 #include <ComponentKit/CKDataSourceConfigurationInternal.h>
@@ -207,7 +208,7 @@
 #include <ComponentKit/CKCollectionViewDataSource.h>
 // #include <ComponentKit/CKButtonComponent.h>
 // #include <ComponentKit/CKClippingComponent.h>
-// #include <RenderCore/CKViewConfiguration.h>
+#include <RenderCore/CKViewConfiguration.h>
 // #include <ComponentKit/CKComponentInternal.h>
 // #include <ComponentKit/CenterLayoutComponentBuilder.h>
 #include <ComponentKit/CKDataSource.h>
@@ -222,7 +223,7 @@
 // #include <ComponentKit/CKStatefulViewComponentController.h>
 // #include <ComponentTextKit/CKLabelComponent.h>
 // #include <ComponentKit/CKComponentController.h>
-// #include <RenderCore/CKMountable.h>
+#include <RenderCore/CKMountable.h>
 #include <ComponentTextKit/CKTextKitAttributes.h>
 // #include <ComponentKit/CKComponentLayout.h>
 #include <RenderCore/RCDimension.h>
@@ -232,8 +233,8 @@
 #include <ComponentTextKit/CKAsyncTransaction.h>
 #include <ComponentKit/CKTreeNode.h>
 #include <ComponentKit/CKComponentGenerator.h>
-// #include <RenderCore/CKComponentViewClass.h>
-// #include <ComponentTextKit/CKTextKitRendererCache.h>
+#include <RenderCore/CKComponentViewClass.h>
+#include <ComponentTextKit/CKTextKitRendererCache.h>
 // #include <ComponentKit/RatioLayoutComponentBuilder.h>
 // #include <ComponentKit/CKAnalyticsListener.h>
 // #include <ComponentKit/CKZStackComponent.h>
@@ -241,7 +242,7 @@
 #include <RenderCore/CKCollection.h>
 // #include <ComponentKit/CKComponentSubclass.h>
 #include <RenderCore/CKComponentViewAttribute.h>
-// #include <RenderCore/ComponentViewManager.h>
+#include <RenderCore/ComponentViewManager.h>
 #include <ComponentKit/CKComponentActionInternal.h>
 #include <RenderCore/CKFunctionalHelpers.h>
 #include <RenderCore/RCEqualityHelpers.h>
@@ -252,7 +253,7 @@
 // #include <ComponentKit/CKFlexboxComponent.h>
 #include <ComponentKit/CKAnimation.h>
 #include <ComponentTextKit/CKCacheImpl.h>
-// #include <RenderCore/CKVariant.h>
+#include <RenderCore/CKVariant.h>
 // #include <ComponentKit/ButtonComponentBuilder.h>
 #include <RenderCore/CKOptional.h>
 // #include <ComponentKit/ComponentBuilder.h>
