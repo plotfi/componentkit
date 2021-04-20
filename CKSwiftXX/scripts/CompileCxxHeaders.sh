@@ -43,4 +43,5 @@ $SWIFT_BUILD_PATH/bin/swift -frontend \
   -I./ComponentKit/Analytics/ComponentKit \
   -I./ComponentKit/Debug/ComponentKit \
   -I./RenderCoreLayoutCaching/RenderCoreLayoutCaching \
+  -I./External/react-native/ReactCommon/yoga \
   -module-name main ./CKSwiftXX/Swift/main.swift
