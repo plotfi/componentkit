@@ -206,7 +206,7 @@
 #include <ComponentKit/CKDataSourceConfigurationInternal.h>
 #include <ComponentKit/CKComponentScopeRoot.h>
 #include <ComponentKit/CKCollectionViewDataSource.h>
-// wtf
+// foo
 #include <ComponentKit/CKButtonComponent.h>
 #include <ComponentKit/CKClippingComponent.h>
 #include <RenderCore/CKViewConfiguration.h>
