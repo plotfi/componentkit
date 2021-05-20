@@ -1,4 +1,7 @@
-export IOS_VERSION=14.4
+
+#   -I/Applications/Xcode.app//Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 \
+
+export IOS_VERSION=14.5
 
 $SWIFT_BUILD_PATH/bin/swift -frontend \
   -S -emit-ir \
@@ -6,7 +9,6 @@ $SWIFT_BUILD_PATH/bin/swift -frontend \
   -enable-cxx-interop -enable-objc-interop \
   -target arm64-apple-ios$IOS_VERSION  -target-sdk-version $IOS_VERSION \
   -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS$IOS_VERSION.sdk \
-  -I/Applications/Xcode.app//Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 \
   -I./CKSwiftXX/include/ \
   -I./ComponentTextKit/ComponentTextKit \
   -I./ComponentTextKit/TextKit/ComponentTextKit \

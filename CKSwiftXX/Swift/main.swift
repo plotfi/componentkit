@@ -14,4 +14,6 @@ CKOverrideWritingDirection(WritingDirection)
 let IndexSet = NSIndexSet(index: 42)
 let Str = CK.indexSetDescription(IndexSet, "foobar", 42)
 
+let UsingCKComponentViewConfiguration = CKComponentViewConfiguration()
+
 print("Done.")

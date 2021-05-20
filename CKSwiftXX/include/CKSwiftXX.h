@@ -35,123 +35,121 @@
 #include <utility>
 #include <vector>
 
-#include <RenderCore/RCFatal.h>
-#include <ComponentKit/CKTraitCollectionHelper.h>
-#include <ComponentKit/CKComponentViewConfiguration.h>
-#include <ComponentKit/ComponentUtilities.h>
-#include <ComponentKit/CKIndexSetDescription.h>
-#include <ComponentKit/CKDataSourceQOSHelper.h>
-#include <ComponentTextKit/CKTextKitTailTruncater.h>
-#include <ComponentKit/CKCoalescedSpecSupport.h>
-#include <ComponentKit/CKDataSourceReloadModification.h>
-#include <ComponentKit/CKStatelessComponentContext.h>
-#include <ComponentTextKit/CKAsyncTransactionContainer+Private.h>
-#include <RenderCore/CKDelayedNonNull.h>
-#include <ComponentKit/CKComponent+LayoutLifecycle.h>
-#include <ComponentKit/CKWritingDirection.h>
-#include <ComponentKit/CKComponentRootLayoutProvider.h>
-#include <ComponentKit/CKDataSourceUpdateConfigurationModification.h>
-#include <ComponentKit/CKComponentControllerProtocol.h>
-#include <ComponentKit/CKComponentAnnouncerBase.h>
-#include <ComponentKit/CKDataSourceListenerAnnouncer.h>
-#include <ComponentKit/CKDataSourceUpdateStateModification.h>
-#include <ComponentKit/CKInspectableView.h>
-#include <RenderCore/RCDispatch.h>
-#include <ComponentKit/CKCategorizable.h>
-#include <ComponentKit/CKComponentViewConfiguration_SwiftBridge+Internal.h>
-#include <ComponentKit/CKSizeRange_SwiftBridge+Internal.h>
-#include <ComponentKit/RCComponentSize_SwiftBridge+Internal.h>
-#include <ComponentKit/RCDimension_SwiftBridge+Internal.h>
-#include <ComponentTextKit/CKTextComponentViewInternal.h>
-#include <RenderCore/CKCasting.h>
-#include <RenderCore/CKCasting.h>
-#include <RenderCore/RCIterable.h>
-#include <ComponentKit/CKTreeNodeTypes.h>
-#include <RenderCore/CKDefines.h>
-#include <ComponentKit/CKComponent+UIView.h>
-#include <ComponentKit/CKComponentViewAttribute_SwiftBridge+Internal.h>
-#include <ComponentKit/CKComponentHostingViewProtocol.h>
-#include <ComponentKit/CKDataSourceStateInternal.h>
-#include <ComponentTextKit/CKTextComponentLayer.h>
-#include <ComponentTextKit/CKTextComponentLayerHighlighter.h>
-#include <ComponentKit/CKBuildTrigger.h>
-#include <ComponentKit/CKAnalyticsListenerHelpers.h>
-#include <ComponentKit/CKComponentGestureActionHelper.h>
-#include <ComponentKit/CKComponentGestureActionsInternal.h>
-#include <ComponentKit/CKSupplementaryViewDataSource.h>
-#include <ComponentKit/CKDataSourceItemInternal.h>
-#include <ComponentKit/CKDataSourceModificationHelper.h>
-#include <ComponentTextKit/CKTextKitEntityAttribute.h>
-#include <ComponentTextKit/CKAsyncTransactionGroup.h>
-#include <ComponentKit/CKComponentScopeEnumeratorProvider.h>
-#include <ComponentKit/CKDataSourceStateModifying.h>
-#include <ComponentTextKit/CKTextKitRenderer+TextChecking.h>
-#include <RenderCore/RCComponentDescriptionHelper.h>
-#include <ComponentKit/CKImageComponent.h>
-#include <ComponentKit/CKBuildComponentResult.h>
-#include <ComponentKit/CKChangesetUpdateConfiguration.h>
-#include <ComponentKit/CKCollectionViewDataSourceListener.h>
-#include <ComponentKit/CKComponentAnnouncerBaseInternal.h>
-#include <ComponentKit/CKStatefulViewReusePool.h>
-#include <ComponentKit/CKExceptionInfoScopedValue.h>
-#include <ComponentKit/CKComponentHierarchyDebugHelper.h>
-#include <ComponentKit/CKDataSourceItem.h>
-#include <ComponentKit/CKDataSourceChangesetVerification.h>
-#include <ComponentKit/CKTransitions.h>
-#include <ComponentTextKit/CKTextComponentViewControlTracker.h>
-#include <ComponentTextKit/CKAsyncLayerSubclass.h>
-#include <ComponentKit/CKAutoSizedImageComponent.h>
-#include <ComponentKit/CKComponentControllerHelper.h>
-#include <ComponentKit/CKComponentControllerEvents.h>
-#include <ComponentKit/CKComponentAccessibility.h>
-#include <ComponentKit/CKNetworkImageComponent.h>
-#include <ComponentKit/CKBaseSpecContext.h>
-#include <ComponentKit/CKDataSourceConfiguration.h>
-#include <ComponentKit/CKStateUpdateMetadata.h>
-#include <ComponentKit/CKStatefulViewComponent.h>
-#include <ComponentTextKit/CKTextKitTruncating.h>
-#include <ComponentKit/CKComponentDelegateAttribute.h>
-#include <ComponentKit/CKComponentKey.h>
-#include <ComponentKit/CKComponentFlexibleSizeRangeProvider.h>
-#include <ComponentKit/CKComponentSpecContext.h>
-#include <ComponentKit/CKAccessibilityAggregation.h>
-#include <ComponentKit/CKComponentScopeTypes.h>
-#include <ComponentKit/CKDataSourceChangeset.h>
-#include <RenderCore/CKPropBitmap.h>
-#include <ComponentKit/CKComponentAnimationData.h>
-#include <RenderCore/RCContainerWrapper.h>
-#include <ComponentKit/CKComponentScopeRootFactory.h>
-#include <RenderCore/CKRequired.h>
-#include <RenderCore/CKSizeRange.h>
-#include <ComponentKit/CKCollectionViewDataSourceInternal.h>
-#include <RenderCore/ComponentViewReuseUtilities.h>
-#include <ComponentKit/CKComponentControllerInternal.h>
-#include <ComponentTextKit/CKTextComponent.h>
-#include <ComponentTextKit/CKAsyncLayerInternal.h>
-#include <ComponentKit/CKNetworkImageDownloading.h>
-#include <ComponentKit/CKTreeVerificationHelpers.h>
-#include <ComponentKit/CKComponentBoundsAnimation+UICollectionView.h>
-#include <ComponentKit/CKCellDeallocUnmounter.h>
-#include <ComponentKit/CKComponentHostingContainerViewProvider.h>
-#include <ComponentKit/CKComponentRootViewInternal.h>
-#include <ComponentKit/CKComponentAttachControllerInternal.h>
-#include <ComponentTextKit/CKTextKitContext.h>
-#include <ComponentTextKit/CKHighlightOverlayLayer.h>
-#include <RenderCoreLayoutCaching/RCComputeRootLayout.h>
-#include <ComponentKit/CKSystraceScope.h>
-#include <ComponentKit/CKComponentTreeDiff.h>
-#include <ComponentKit/CKComponentPerfScope.h>
-#include <ComponentKit/CKAsyncBlock.h>
-#include <ComponentKit/CKComponentDelegateForwarder.h>
-#include <ComponentKit/CKComponentEvents.h>
-#include <ComponentKit/CKRenderComponent.h>
-#include <RenderCore/RCGeometryHelpers.h>
-#include <ComponentKit/CKComponentGestureActions.h>
-#include <ComponentKit/CKIterableHelpers.h>
-#include <ComponentKit/CKBuildComponentTreeParams.h>
-#include <ComponentKit/CKTreeNodeProtocol.h>
-#include <ComponentKit/CKOptimisticViewMutations.h>
-#include <ComponentKit/CKComponentHostingViewInternal.h>
+#include <RenderCore/RCFatal.h> // C code: varargs [ ]
+#include <ComponentKit/CKTraitCollectionHelper.h> // C code: ObjC [ ]
+#include <ComponentKit/CKComponentViewConfiguration.h> // C++: using decl [X]
+#include <ComponentKit/ComponentUtilities.h> // Nothing but imports/includes [ ]
+#include <ComponentKit/CKIndexSetDescription.h> // C++: namespace, auto, default parems [X]
+#include <ComponentKit/CKDataSourceQOSHelper.h> // ObjC, C++: default params [ ]
+#include <ComponentTextKit/CKTextKitTailTruncater.h> // ObjC [ ]
+#include <ComponentKit/CKCoalescedSpecSupport.h> // C++: namespace, inline [X]
+#include <ComponentKit/CKDataSourceReloadModification.h> // ObjC [ ]
+#include <ComponentKit/CKStatelessComponentContext.h> // ObjC [ ]
+#include <ComponentTextKit/CKAsyncTransactionContainer+Private.h> // ObjC [ ]
+#include <RenderCore/CKDelayedNonNull.h> // C++: namespace, template [ ]
+#include <ComponentKit/CKComponent+LayoutLifecycle.h> // ObjC [ ]
+#include <ComponentKit/CKWritingDirection.h> // C++: enum class [ ]
+#include <ComponentKit/CKComponentRootLayoutProvider.h> // ObjC [ ]
+#include <ComponentKit/CKDataSourceUpdateConfigurationModification.h> // ObjC [ ]
+#include <ComponentKit/CKComponentControllerProtocol.h> // ObjC [ ]
+#include <ComponentKit/CKComponentAnnouncerBase.h> // ObjC [ ]
+#include <ComponentKit/CKDataSourceListenerAnnouncer.h> // ObjC [ ]
+#include <ComponentKit/CKDataSourceUpdateStateModification.h> // C++: share_ptr, ObjC [ ]
+#include <ComponentKit/CKInspectableView.h> // ObjC [ ]
+#include <RenderCore/RCDispatch.h> // C++: noexcept, ObjC [ ]
+#include <ComponentKit/CKCategorizable.h> // ObjC [ ]
+#include <ComponentKit/CKComponentViewConfiguration_SwiftBridge+Internal.h> // ObjC [ ]
+#include <ComponentKit/CKSizeRange_SwiftBridge+Internal.h> // ObjC [ ]
+#include <ComponentKit/RCComponentSize_SwiftBridge+Internal.h> // ObjC [ ]
+#include <ComponentKit/RCDimension_SwiftBridge+Internal.h> // ObjC [ ]
+#include <ComponentTextKit/CKTextComponentViewInternal.h> // ObjC [ ]
+#include <RenderCore/CKCasting.h> // C++: namespace, template [ ]
+#include <RenderCore/RCIterable.h>  // ObjC [ ]
+#include <ComponentKit/CKTreeNodeTypes.h> // C++: includes tuple unordred_set unordered_map
+#include <RenderCore/CKDefines.h> // Nothing but preprocessor and includes
+#include <ComponentKit/CKComponent+UIView.h>  // ObjC [ ]
+#include <ComponentKit/CKComponentViewAttribute_SwiftBridge+Internal.h>  // C++: auto, ObjC mostly [ ]
+#include <ComponentKit/CKComponentHostingViewProtocol.h>  // ObjC [ ]
+#include <ComponentKit/CKDataSourceStateInternal.h>  // ObjC [ ]
+#include <ComponentTextKit/CKTextComponentLayer.h>  // ObjC [ ]
+#include <ComponentTextKit/CKTextComponentLayerHighlighter.h>  // ObjC [ ]
+#include <ComponentKit/CKBuildTrigger.h>  // ObjC [ ]
+#include <ComponentKit/CKAnalyticsListenerHelpers.h>   // C++: auto and namespaces, ObjC mostly [ ]
+#include <ComponentKit/CKComponentGestureActionHelper.h> // C++: class and std::vector, ObjC [ ]
+#include <ComponentKit/CKComponentGestureActionsInternal.h>   // C++: std::string, ObjC mostly [ ]
+#include <ComponentKit/CKSupplementaryViewDataSource.h>  // ObjC [ ]
+#include <ComponentKit/CKDataSourceItemInternal.h>  // ObjC [ ]
+#include <ComponentKit/CKDataSourceModificationHelper.h>  // C++: shared_ptr, ObjC mostly [ ]
+#include <ComponentTextKit/CKTextKitEntityAttribute.h>  // ObjC [ ]
+#include <ComponentTextKit/CKAsyncTransactionGroup.h>  // ObjC [ ]
+#include <ComponentKit/CKComponentScopeEnumeratorProvider.h>  // ObjC [ ]
+#include <ComponentKit/CKDataSourceStateModifying.h>  // ObjC [ ]
+#include <ComponentTextKit/CKTextKitRenderer+TextChecking.h>  // ObjC [ ]
+#include <RenderCore/RCComponentDescriptionHelper.h> // C++: shared_ptr, noexcept, ObjC [ ]
+#include <ComponentKit/CKImageComponent.h> // ObjC [ ]
+#include <ComponentKit/CKBuildComponentResult.h> // C++: templates [ ]
+#include <ComponentKit/CKChangesetUpdateConfiguration.h> // ObjC [ ]
+#include <ComponentKit/CKCollectionViewDataSourceListener.h>  // ObjC [ ]
+#include <ComponentKit/CKComponentAnnouncerBaseInternal.h>  // C++: shared_ptr, std::vector , ObjC [ ]
+#include <ComponentKit/CKStatefulViewReusePool.h>  // ObjC [ ]
+#include <ComponentKit/CKExceptionInfoScopedValue.h> // C++: operator=, ctor/cctor=delete, dtor [ ]
+#include <ComponentKit/CKComponentHierarchyDebugHelper.h>  // ObjC [ ]
+#include <ComponentKit/CKDataSourceItem.h>  // C++: Templates ObjC [ ]
+#include <ComponentKit/CKDataSourceChangesetVerification.h>  // ObjC [ 
+#include <ComponentKit/CKTransitions.h> // C++: templates, namespace look up, dtor, auto -> [ ]
+#include <ComponentTextKit/CKTextComponentViewControlTracker.h>  // ObjC [ ]
+#include <ComponentTextKit/CKAsyncLayerSubclass.h> // ObjC [ ]
+#include <ComponentKit/CKAutoSizedImageComponent.h> // ObjC [ ]
+#include <ComponentKit/CKComponentControllerHelper.h> // C++: std::vector, ObjC [ ]
+#include <ComponentKit/CKComponentAccessibility.h> // C++: namespace, reference params [ ]
+#include <ComponentKit/CKNetworkImageComponent.h> // ObjC [ ]
+#include <ComponentKit/CKBaseSpecContext.h> // C++: namespace, class, templates, auto, operator= [ ]
+#include <ComponentKit/CKDataSourceConfiguration.h> // ObjC [ ]
+#include <ComponentKit/CKStateUpdateMetadata.h> // C++: operator(), reference param, using [ ]
+#include <ComponentKit/CKStatefulViewComponent.h>  // ObjC [ ]
+#include <ComponentTextKit/CKTextKitTruncating.h>  // C++: std::vector, ObjC [ ]
+#include <ComponentKit/CKComponentDelegateAttribute.h>  // C++: import vector, noexcept, ObjC [ ]
+#include <ComponentKit/CKComponentKey.h> // C++: class, ObjC [ ]
+#include <ComponentKit/CKComponentFlexibleSizeRangeProvider.h>  // ObjC [ ]
+#include <ComponentKit/CKComponentSpecContext.h> // C++: namespace, templates, class, public inheritance [ ]
+#include <ComponentKit/CKAccessibilityAggregation.h>  // ObjC [ ]
+#include <ComponentKit/CKComponentScopeTypes.h> // C++: unsorted_map, std::vector, using [ ]
+#include <ComponentKit/CKDataSourceChangeset.h>  // C++: namesapce, auto ->, ObjC [ ]
+#include <RenderCore/CKPropBitmap.h> // C++: namespace, auto ->, constexpr [ ]
+#include <ComponentKit/CKComponentAnimationData.h> // C++: unordered_map, std::vector [ ]
+#include <RenderCore/RCContainerWrapper.h> // C++: std::initializer_list, class, unordered_map, std::vector, std::move, cctor/ctor/dtor=delete [ ]
+#include <ComponentKit/CKComponentScopeRootFactory.h> // C++: namespace lookup, template, unordered_set [ ]
+#include <RenderCore/CKRequired.h> // C++: template, std::forward, static_assert, move ctor [ ]
+#include <RenderCore/CKSizeRange.h> // C++: namespace, templates, operator==, operator() [ ]
+#include <ComponentKit/CKCollectionViewDataSourceInternal.h> // ObjC [ ]
+#include <RenderCore/ComponentViewReuseUtilities.h> // C++: namespace, class, noexcept [ ]
+#include <ComponentKit/CKComponentControllerInternal.h> // ObjC [ ]
+#include <ComponentTextKit/CKTextComponent.h> // ObjC [ ]
+#include <ComponentTextKit/CKAsyncLayerInternal.h> // C++: std::atomics [ ]
+#include <ComponentKit/CKNetworkImageDownloading.h> // ObjC [ ]
+#include <ComponentKit/CKTreeVerificationHelpers.h> // C++:  reference param , ObjC [ ]
+#include <ComponentKit/CKComponentBoundsAnimation+UICollectionView.h> // C++:  reference param , ObjC [ ]
+#include <ComponentKit/CKCellDeallocUnmounter.h>  // ObjC [ ]
+#include <ComponentKit/CKComponentHostingContainerViewProvider.h>  // C++:  reference param , ObjC [ ]
+#include <ComponentKit/CKComponentRootViewInternal.h>  // ObjC [ ]
+#include <ComponentKit/CKComponentAttachControllerInternal.h>  // C++: auto ->, shared_ptr, namespace lookup, reference param, ObjC [ ]
+#include <ComponentTextKit/CKTextKitContext.h>  // ObjC [ ]
+#include <ComponentTextKit/CKHighlightOverlayLayer.h>  // C++: default param, ObjC [ ]
+#include <RenderCoreLayoutCaching/RCComputeRootLayout.h> // C++; shared_ptr, reference params [ ]
+#include <ComponentKit/CKSystraceScope.h> // C++: class, namespace lookup [ ]
+#include <ComponentKit/CKComponentTreeDiff.h> // C++: namespace, auto ->, std::vector, operator==, bool [ ]
+#include <ComponentKit/CKComponentPerfScope.h> // C++: class, operator= [ ]
+#include <ComponentKit/CKAsyncBlock.h> // C++: namespace, constexpr, auto, std::function, auto -> [ ]
+#include <ComponentKit/CKComponentDelegateForwarder.h> // C++: using, std::string, auto -> [ ]
+#include <ComponentKit/CKComponentEvents.h> // C++: auto -> [ ]
+#include <ComponentKit/CKRenderComponent.h> // ObjC [ ]
+#include <RenderCore/RCGeometryHelpers.h> // C++: inline, operator (all of them) [ ]
+#include <ComponentKit/CKComponentGestureActions.h>  // C++: default params, ObjC [ ]
+#include <ComponentKit/CKIterableHelpers.h>  // C++: namespace, template, ObjC [ ]
+#include <ComponentKit/CKBuildComponentTreeParams.h> // C++: reference types [ ]
+#include <ComponentKit/CKTreeNodeProtocol.h> // C++: unordered_map [ ]
+#include <ComponentKit/CKOptimisticViewMutations.h> // C++: default params, ObjC [ ]
+#include <ComponentKit/CKComponentHostingViewInternal.h> // C++: templates, namespace lookup, unordered_set, reference params, ObjC [ ]
 #include <ComponentKit/CKComponentAccessibilityContext.h>
 #include <ComponentKit/CKAnimationComponent.h>
 #include <ComponentKit/CKComponentAnimations.h>
@@ -206,7 +204,6 @@
 #include <ComponentKit/CKDataSourceConfigurationInternal.h>
 #include <ComponentKit/CKComponentScopeRoot.h>
 #include <ComponentKit/CKCollectionViewDataSource.h>
-// foo
 #include <ComponentKit/CKButtonComponent.h>
 #include <ComponentKit/CKClippingComponent.h>
 #include <RenderCore/CKViewConfiguration.h>
