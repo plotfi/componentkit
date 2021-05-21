@@ -150,48 +150,48 @@
 #include <ComponentKit/CKTreeNodeProtocol.h> // C++: unordered_map [ ]
 #include <ComponentKit/CKOptimisticViewMutations.h> // C++: default params, ObjC [ ]
 #include <ComponentKit/CKComponentHostingViewInternal.h> // C++: templates, namespace lookup, unordered_set, reference params, ObjC [ ]
-#include <ComponentKit/CKComponentAccessibilityContext.h>
-#include <ComponentKit/CKAnimationComponent.h>
-#include <ComponentKit/CKComponentAnimations.h>
-#include <ComponentKit/CKComponentProtocol.h>
-#include <ComponentKit/CKAnimationApplicator.h>
-#include <ComponentKit/CKRootTreeNode.h>
-#include <ComponentKit/CKDataSourceChangesetApplicator.h>
-#include <RenderCore/CKMountableHelpers.h>
-#include <ComponentKit/CKStaticLayoutComponent.h>
-#include <ComponentKit/CKDataSourceAppliedChanges.h>
-#include <ComponentKit/CKIdValueWrapperInternal.h>
-#include <ComponentKit/CKComponentAnnouncerHelper.h>
+#include <ComponentKit/CKComponentAccessibilityContext.h> // C++: using [ ]
+#include <ComponentKit/CKAnimationComponent.h> // C++: namespace lookup [ ]
+#include <ComponentKit/CKComponentAnimations.h> // C++: namespace, auto ->, reference params [ ]
+#include <ComponentKit/CKComponentProtocol.h>  // C++: reference params, ObjC [ ]
+#include <ComponentKit/CKAnimationApplicator.h> // C++: namespace, template, class, using, unique_ptr, auto [ ]
+#include <ComponentKit/CKRootTreeNode.h> // C++: class, unordered_map, std::stack [ ]
+#include <ComponentKit/CKDataSourceChangesetApplicator.h>  // ObjC [ ]
+#include <RenderCore/CKMountableHelpers.h> // C++: using, namespace lookup, unique_ptr [ ]
+#include <ComponentKit/CKStaticLayoutComponent.h> // C++: reference params, ObjC [ ]
+#include <ComponentKit/CKDataSourceAppliedChanges.h>  // ObjC [ ]
+#include <ComponentKit/CKIdValueWrapperInternal.h>  // C++: using, templates, new, std::move, reinterpret_cast , ObjC [ ]
+#include <ComponentKit/CKComponentAnnouncerHelper.h> // C++: namespace, templates, auto, struct/class etc [ ]
 #include <ComponentTextKit/CKFunctor.h>
-#include <ComponentKit/CKStatelessComponent.h>
+#include <ComponentKit/CKStatelessComponent.h> // ObjC [ ]
 #include <ComponentKit/CKTreeNodeComponentKey.h>
-#include <ComponentKit/CKComponentCreationValidation.h>
-#include <ComponentKit/CKComponentDebugController.h>
-#include <ComponentKit/CKComponentAnimationHooks.h>
-#include <ComponentKit/CKComponentHostingView.h>
-#include <ComponentKit/CKSystraceListener.h>
-#include <ComponentKit/CKComponentAnimation.h>
-#include <ComponentKit/CKDataSourceChangesetInternal.h>
-#include <ComponentKit/CKDataSourceChangesetModification.h>
-#include <ComponentKit/CKBuildComponent.h>
-#include <ComponentKit/CKComponentAttachController.h>
-#include <RenderCore/CKInternalHelpers.h>
-#include <ComponentKit/CKComponentBoundsAnimation.h>
-#include <ComponentKit/CKComponentContextHelper.h>
-#include <ComponentTextKit/CKTextKitShadower.h>
-#include <RenderCore/RCAccessibilityContext.h>
-#include <ComponentKit/CKDataSourceListener.h>
-#include <ComponentKit/CKDataSourceInternal.h>
-#include <ComponentTextKit/CKAsyncTransactionContainer.h>
+#include <ComponentKit/CKComponentCreationValidation.h>  // ObjC [ ]
+#include <ComponentKit/CKComponentDebugController.h>  // C++: reference param, ObjC [ ]
+#include <ComponentKit/CKComponentAnimationHooks.h>  // C++: using, auto ->, ObjC [ ]
+#include <ComponentKit/CKComponentHostingView.h>  // ObjC [ ]
+#include <ComponentKit/CKSystraceListener.h> // C++: std::function, ObjC [ ]
+#include <ComponentKit/CKComponentAnimation.h> // C++: noexcept, reference param, default params, ObjC [ ]
+#include <ComponentKit/CKDataSourceChangesetInternal.h> // C++: namespaces, auto ->, ObjC [ ]
+#include <ComponentKit/CKDataSourceChangesetModification.h> // C++: reference params, namespace lookup, shared_ptr, templates, namespace, auto ->, ObjC [ ]
+#include <ComponentKit/CKBuildComponent.h>  // C++: reference params, namespace lookup, templates, auto ->, ObjC [ ]
+#include <ComponentKit/CKComponentAttachController.h>  // C++: reference params, ObjC [ ]
+#include <RenderCore/CKInternalHelpers.h> // C++:  auto ->, noexcept [ ]
+#include <ComponentKit/CKComponentBoundsAnimation.h> // C++: auto ->, operator !=/==, ObjC [ ]
+#include <ComponentKit/CKComponentContextHelper.h> // C++: class, noexcept, operator !=/==, ObjC [ ]
+#include <ComponentTextKit/CKTextKitShadower.h> // ObjC [ ]
+#include <RenderCore/RCAccessibilityContext.h> // C++: structs with functions inside [ ]
+#include <ComponentKit/CKDataSourceListener.h> // ObjC [ ]
+#include <ComponentKit/CKDataSourceInternal.h> // ObjC [ ]
+#include <ComponentTextKit/CKAsyncTransactionContainer.h> // ObjC [ ]
 // Require React Native ./ReactCommon/yoga/yoga/Yoga.h
-#include <ComponentKit/CKComponent+Yoga.h>
-#include <ComponentTextKit/CKAsyncLayer.h>
-#include <RenderCore/CKGlobalConfig.h>
-#include <RenderCore/ComponentMountContext.h>
-#include <ComponentKit/OverlayLayoutComponentBuilder.h>
-#include <ComponentKit/CKThreadLocalComponentScope.h>
-#include <RenderCore/CKDelayedInitialisationWrapper.h>
-#include <ComponentKit/CKAction_SwiftBridge+Internal.h>
+#include <ComponentKit/CKComponent+Yoga.h> // ObjC [ ]
+#include <ComponentTextKit/CKAsyncLayer.h> // ObjC [ ]
+#include <RenderCore/CKGlobalConfig.h> // C++?: struct with field assignment, C? [ ]
+#include <RenderCore/ComponentMountContext.h> // C++: namespace, shared_ptr, noexcept, struct-class, const methods in struct, ObjC[ ]
+#include <ComponentKit/OverlayLayoutComponentBuilder.h> // C++: namespace, constexpr, templates, reinterpret_cast, static_assert, auto -> [ ]
+#include <ComponentKit/CKThreadLocalComponentScope.h> // C++: class, ctor/dtor, default params, reference params, templates, std::stack, namespace lookup, noexcept [ ]
+#include <RenderCore/CKDelayedInitialisationWrapper.h> // C++: namespaces, templates, struct-class, auto -> [ ]
+#include <ComponentKit/CKAction_SwiftBridge+Internal.h> // C++: using, templates, inline [ ]
 #include <RenderCore/CKDictionary.h>
 #include <ComponentKit/SizingComponentBuilder.h>
 #include <ComponentKit/ComponentLayoutContext.h>
