@@ -192,10 +192,10 @@
 #include <ComponentKit/CKThreadLocalComponentScope.h> // C++: class, ctor/dtor, default params, reference params, templates, std::stack, namespace lookup, noexcept [ ]
 #include <RenderCore/CKDelayedInitialisationWrapper.h> // C++: namespaces, templates, struct-class, auto -> [ ]
 #include <ComponentKit/CKAction_SwiftBridge+Internal.h> // C++: using, templates, inline [ ]
-#include <RenderCore/CKDictionary.h>
+#include <RenderCore/CKDictionary.h> // C++: namespaces, templates, std::vector, using, initializer_list, operator[], etc etc [ ]
 #include <ComponentKit/SizingComponentBuilder.h>
 #include <ComponentKit/ComponentLayoutContext.h>
-#include <ComponentTextKit/CKTextKitRenderer.h>
+#include <ComponentTextKit/CKTextKitRenderer.h>  // C++: std::vector, reference params, ObjC [ ]
 #include <RenderCore/RCLayout.h>
 #include <RenderCore/RCComponentSize.h>
 #include <ComponentKit/CKIndexTransform.h>
