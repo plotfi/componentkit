@@ -9,15 +9,15 @@ import std.unordered_map
 let WritingDirection = CKGetWritingDirection()
 CKOverrideWritingDirection(WritingDirection)
 
-// CKComponentViewConfiguration.h
+// ComponentKit/Core/CKComponentViewConfiguration.h
 let UsingCKComponentViewConfiguration = CKComponentViewConfiguration()
 let UsingCKViewConfiguration = CKViewConfiguration()
 
-// CKIndexSetDescription.h
+// ComponentKit/Debug/CKIndexSetDescription.h
 let IndexSet = NSIndexSet(index: 42)
 let Str = CK.indexSetDescription(IndexSet, "foobar", 42)
 
-// CKCoalescedSpecSupport.h
+// ComponentKit/Base/CKCoalescedSpecSupport.h
 let IsCoalescedModeVal = CK.IsCoalescedMode()
 CK.CoalescedWillRenderRenderComponent(IsCoalescedModeVal)
 CK.CoalescedDidRenderRenderComponent()
@@ -25,11 +25,11 @@ CK.CoalescedDidRenderRenderComponent()
 // TODO: Template structs? 
 // let a = CK.DelayedInitialisationWrapper<Int32>()
 
-// CKWritingDirection.h
+// ComponentKit/Core/CKWritingDirection.h
 let WritingDirection_ = CKWritingDirection.Natural
 CKOverrideWritingDirection(WritingDirection_)
 
-// CKDataSourceUpdateStateModification.h
+// ComponentKit/TransactionalDataSources/Common/Internal/CKDataSourceUpdateStateModification.h
 let CKComponentStateUpdatesMap_ = CKComponentStateUpdatesMap()
 
 // TODO: Assert instead of error message??
@@ -37,19 +37,19 @@ let CKComponentStateUpdatesMap_ = CKComponentStateUpdatesMap()
 // let b = id()
 // let a = objCForceCast<Int32>(b)
 
-// CKTreeNodeTypes.h
+// ComponentKit/Core/ComponentTree/Protocols/CKTreeNodeTypes.h
 let CKTreeNodeDirtyIds_ = CKTreeNodeDirtyIds()
 
-// CKComponent+UIView.h
+// ComponentKit/Core/CKComponent+UIView.h
 let UIView_ = UIView()
 let CKLastMountedComponentClassNameForView_ = CKLastMountedComponentClassNameForView(UIView_)
 
 // TODO: ifdef DEBUG
-// CKAnalyticsListenerHelpers.h
+// ComponentKit/Analytics/CKAnalyticsListenerHelpers.h
 // let object = NSObject()
 // let a = CKAnalyticsListenerHelpers.GetReusedNodes(object)
 
-// CKComponentGestureActionHelper.h
+// ComponentKit/Core/Action/CKComponentGestureActionHelper.h
 let Gesture = UIGestureRecognizer()
 let CKComponentGestureGetAction_ = CKComponentGestureGetAction(Gesture)
 // let Class_ : objc_class
@@ -58,7 +58,7 @@ let CKComponentGestureGetAction_ = CKComponentGestureGetAction(Gesture)
 // let CKGestureRecognizerReusePool_ = CKGestureRecognizerReusePool(Class_, setupFunction)
 
 // TODO: UnsafePointer of a CKComponntScopeRoot, how to get one??
-// CKBuildComponentResult.h
+// ComponentKit/Core/CKBuildComponentResult.h
 let component_ = Component()
 // let a : UnsafePointer<CKComponentScopeRoot?> = nil
 // let scopeRoot_ = CK.__CxxTemplateInstN2CK7NonNullIU8__strongP20CKComponentScopeRootEE(a)
@@ -66,20 +66,20 @@ let boundsAnimation = CKComponentBoundsAnimation()
 let buildTrigger = CKBuildTrigger()
 // let a = CKBuildComponentResult()
 
-// TODO: CKExceptionInfoScopedValue not imported 
-// CKExceptionInfoScopedValue.h
+// TODO: CKExceptionInfoScopedValue not imported
+// ComponentKit/Base/CKExceptionInfoScopedValue.h
 let key : NSString = "hello"
 let value : NSString = "goodbye"
 // let CKExceptionInfoScopedValue_ = CKExceptionInfoScopedValue(key, value)
 
-// CKTransitions.h
+// ComponentKit/Core/CKTransitions.h
 var CKTransitions_ = CKTransitions()
 let areEmpty = CKTransitions_.areEmpty()
 let onInitialMount = CKTransitions_.onInitialMount
 
 
 // TODO: How to pass some objc block?
-// CKComponentControllerHelper.h
+// ComponentKit/Core/CKComponentControllerHelper.h
 let newRoot = CKComponentScopeRoot()
 let previousRoot = CKComponentScopeRoot()
 // let predicate = false
@@ -89,7 +89,7 @@ let previousRoot = CKComponentScopeRoot()
 //   predicate
 // )
 
-// CKComponentAccessibility.h
+// ComponentKit/Accessibility/CKComponentAccessibility.h
 let Enabled = false
 CK.Component.Accessibility.SetForceAccessibilityEnabled(Enabled)
 
@@ -103,21 +103,21 @@ CK.Component.Accessibility.SetForceAccessibilityEnabled(Enabled)
 // var a = StringHasher()
 // a(nss)
 
-// CKStateUpdateMetadata.h
+// ComponentKit/Core/CKStateUpdateMetadata.h
 let CKStateUpdateMetadata_ = CKStateUpdateMetadata()
 let userInfo_ = CKStateUpdateMetadata_.userInfo
 
 // TODO: why does CKComponentKey not import?
-// CKComponentKey.h
+// ComponentKit/Core/Scope/CKComponentKey.h
 // let CKComponentKey_ = CKComponentKey()
 
-// CKComponentSpecContext.h
+// ComponentKit/Spec/CKComponentSpecContext.h
 let ComponentSpecContext_ = CK.ComponentSpecContext()
 
 // TODO: how to use function ptrs, blocks and ids?
-// CKComponentScopeTypes.h
+// ComponentKit/Core/Scope/CKComponentScopeTypes.h
 
-// CKDataSourceChangeset.h
+// ComponentKit/TransactionalDataSources/Common/CKDataSourceChangeset.h
 let NSIndexPath_ = NSIndexPath()
 let NSObject_ = NSObject()
 let Dict_ : NSDictionary = [
@@ -156,6 +156,64 @@ let CKDuplicateComponentInfo_ = CKDuplicateComponentInfo()
 let CKDuplicateComponentInfo_component = CKDuplicateComponentInfo_.component
 let CKDuplicateComponentInfo_backraceDescription = CKDuplicateComponentInfo_.backtraceDescription
 
+// ComponentKit/Core/CKComponentAttachControllerInternal.h
+let attachState = CKComponentAttachState()
+let AttachStateForView = CKGetAttachStateForView(View)
+CKSetAttachStateForView(View, attachState)
+
+// RenderCoreLayoutCaching/RCComputeRootLayout.h
+let RCLayoutResult_ = RCLayoutResult()
+let RCLayoutResultCache = RCLayoutResult_.cache
+let RCLayoutResultLayout = RCLayoutResult_.layout
+
+// TODO: Why is CKSystraceScope not imported
+// ComponentKit/Analytics/CKSystraceScope.h
+// let blockNameStr = "Hello"
+// let blockName = blockNameStr.cString(using: String.Encoding.ascii)
+// let CKSystraceScope_ = CKSystraceScope(blockName)
+
+// ComponentKit/Core/CKComponentTreeDiff.h
+var ComponentTreeDiff = CK.ComponentTreeDiff()
+let appearedComponents = ComponentTreeDiff.appearedComponents
+ComponentTreeDiff.isEmpty()
+
+// TODO: CKComponentPerfScope not importing
+// ComponentKit/Core/Scope/CKComponentPerfScope.h
+// var a = CKComponentPerfScope()
+
+// ComponentKit/Analytics/CKAsyncBlock.h
+let ComponentGeneratorWillGenerate = CK.Analytics.BlockName.ComponentGeneratorWillGenerate
+let ComponentGeneratorWillApply = CK.Analytics.BlockName.ComponentGeneratorWillApply
+let NameStr = "Hello"
+let NameCStr : [CChar] = NameStr.cString(using: String.Encoding.ascii)!
+
+// TODO: ./CKSwiftXX/Swift/main.swift:190:73: error: cannot convert value of type '() -> ()' to expected argument type 'std.__1.__CxxTemplateInstNSt3__18functionIFvvEEE'
+// @_cdecl("f")
+// func f() {}
+// let AsyncBlock = CK.Analytics.AsyncBlock(name: NameCStr, didStartBlock: f)
+
+// ComponentKit/Core/Action/CKComponentDelegateForwarder.h
+let CKDelegateProxyForObject_ = CKDelegateProxyForObject(NSObject_)
+
+// TODO: Assert/Crash on +
+// RenderCore/Geometry/RCGeometryHelpers.h
+// let Point : CGPoint = CGPoint()
+// let Point2 = Point + Point
+
+// ComponentKit/HostingView/CKComponentHostingViewInternal.h
+let CKComponentHostingViewOptions_ = CKComponentHostingViewOptions()
+let initialSize = CKComponentHostingViewOptions_.initialSize
+
+// ComponentKit/Core/CKComponentAnimations.h
+var CKComponentAnimations_ = CKComponentAnimations()
+let description = CKComponentAnimations_.description()
+
+// ComponentKit/LayoutComponents/CKStaticLayoutComponent.h
+let CKStaticLayoutComponentChild_ = CKStaticLayoutComponentChild()
+let Point = CKStaticLayoutComponentChild_.position
+
+// ComponentKit/DataSources/Common/CKComponentAnnouncerHelper.h
+let AnnouncerHelper = CK.Component.AnnouncerHelper()
 
 
 print("Done.")

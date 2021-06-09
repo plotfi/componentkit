@@ -162,7 +162,7 @@
 #include <ComponentKit/CKDataSourceAppliedChanges.h>  // ObjC [ ]
 #include <ComponentKit/CKIdValueWrapperInternal.h>  // C++: using, templates, new, std::move, reinterpret_cast , ObjC [ ]
 #include <ComponentKit/CKComponentAnnouncerHelper.h> // C++: namespace, templates, auto, struct/class etc [ ]
-#include <ComponentTextKit/CKFunctor.h>
+#include <ComponentTextKit/CKFunctor.h> // C++: Template Functions, Namespace
 #include <ComponentKit/CKStatelessComponent.h> // ObjC [ ]
 #include <ComponentKit/CKTreeNodeComponentKey.h>
 #include <ComponentKit/CKComponentCreationValidation.h>  // ObjC [ ]
