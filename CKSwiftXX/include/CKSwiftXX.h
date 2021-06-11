@@ -164,7 +164,7 @@
 #include <ComponentKit/CKComponentAnnouncerHelper.h> // C++: namespace, templates, auto, struct/class etc [ ]
 #include <ComponentTextKit/CKFunctor.h> // C++: Template Functions, Namespace
 #include <ComponentKit/CKStatelessComponent.h> // ObjC [ ]
-#include <ComponentKit/CKTreeNodeComponentKey.h>
+#include <ComponentKit/CKTreeNodeComponentKey.h> // C++: constexpr, enum classes
 #include <ComponentKit/CKComponentCreationValidation.h>  // ObjC [ ]
 #include <ComponentKit/CKComponentDebugController.h>  // C++: reference param, ObjC [ ]
 #include <ComponentKit/CKComponentAnimationHooks.h>  // C++: using, auto ->, ObjC [ ]

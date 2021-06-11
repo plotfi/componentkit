@@ -4,8 +4,6 @@ import CKSwiftXX
 import std.vector
 import std.unordered_map
 
-
-
 let WritingDirection = CKGetWritingDirection()
 CKOverrideWritingDirection(WritingDirection)
 
@@ -214,6 +212,38 @@ let Point = CKStaticLayoutComponentChild_.position
 
 // ComponentKit/DataSources/Common/CKComponentAnnouncerHelper.h
 let AnnouncerHelper = CK.Component.AnnouncerHelper()
+
+let a = 2
+
+// TODO: Lots of template functions here.
+// Work on the Generics syntaxtic sugar for C++ template instantiation from Swift
+// needs to happen.
+// ComponentTextKit/Utility/CKFunctor.h
+
+// TODO: operator== is causing crashes in importer
+// ComponentKit/Core/ComponentTree/CKTreeNodeComponentKey.h
+let CKTreeNodeComponentKey_Type : CKTreeNodeComponentKey.`Type` = .parent
+let startOffsetForType = CKTreeNodeComponentKey.startOffsetForType(CKTreeNodeComponentKey_Type)
+var CKTreeNodeComponentKey_c = CKTreeNodeComponentKey()
+let CKTreeNodeComponentKey_a = CKTreeNodeComponentKey()
+let CKTreeNodeComponentKey_b = CKTreeNodeComponentKey()
+let CKTreeNodeComponentKey_kCounterParentOffer = CKTreeNodeComponentKey.kCounterParentOffset
+let CKTreeNodeComponentKey_Type2 = CKTreeNodeComponentKey_c.type()
+// let isEqual : Bool = CKTreeNodeComponentKey_a == CKTreeNodeComponentKey_b
+
+// TODO: Crasher
+// ComponentKit/Core/CKComponentAnimation.h
+// let Hooks = CKComponentAnimationHooks()
+// let animation : UnsafePointer<CKComponentAnimationHooks> = withUnsafePointer(to: Hooks) {
+//    let _ = CKComponentAnimation($0, nil)
+// }
+
+// ComponentKit/TransactionalDataSources/Common/CKDataSourceChangesetInternal.h
+let changeset = CKDataSourceChangeset<AnyObject>()
+let changesetDesc_ = CK.changesetDescription(changeset)
+
+
+
 
 
 print("Done.")
