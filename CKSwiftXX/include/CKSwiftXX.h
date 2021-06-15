@@ -175,7 +175,7 @@
 #include <ComponentKit/CKDataSourceChangesetModification.h> // C++: reference params, namespace lookup, shared_ptr, templates, namespace, auto ->, ObjC [ ]
 #include <ComponentKit/CKBuildComponent.h>  // C++: reference params, namespace lookup, templates, auto ->, ObjC [ ]
 #include <ComponentKit/CKComponentAttachController.h>  // C++: reference params, ObjC [ ]
-#include <RenderCore/CKInternalHelpers.h> // C++:  auto ->, noexcept [ ]
+#include <RenderCore/CKInternalHelpers.h> // C++:  auto ->, noexcept, inline [ ]
 #include <ComponentKit/CKComponentBoundsAnimation.h> // C++: auto ->, operator !=/==, ObjC [ ]
 #include <ComponentKit/CKComponentContextHelper.h> // C++: class, noexcept, operator !=/==, ObjC [ ]
 #include <ComponentTextKit/CKTextKitShadower.h> // ObjC [ ]
@@ -193,30 +193,30 @@
 #include <RenderCore/CKDelayedInitialisationWrapper.h> // C++: namespaces, templates, struct-class, auto -> [ ]
 #include <ComponentKit/CKAction_SwiftBridge+Internal.h> // C++: using, templates, inline [ ]
 #include <RenderCore/CKDictionary.h> // C++: namespaces, templates, std::vector, using, initializer_list, operator[], etc etc [ ]
-#include <ComponentKit/SizingComponentBuilder.h>
-#include <ComponentKit/ComponentLayoutContext.h>
+#include <ComponentKit/SizingComponentBuilder.h> // C++:: namespaces, template class
+#include <ComponentKit/ComponentLayoutContext.h> // C++: namespaces and struct
 #include <ComponentTextKit/CKTextKitRenderer.h>  // C++: std::vector, reference params, ObjC [ ]
-#include <RenderCore/RCLayout.h>
-#include <RenderCore/RCComponentSize.h>
-#include <ComponentKit/CKIndexTransform.h>
-#include <ComponentKit/CKComponent.h>
-#include <ComponentKit/BackgroundLayoutComponentBuilder.h>
-#include <ComponentKit/CKDataSourceConfigurationInternal.h>
-#include <ComponentKit/CKComponentScopeRoot.h>
-#include <ComponentKit/CKCollectionViewDataSource.h>
-#include <ComponentKit/CKButtonComponent.h>
-#include <ComponentKit/CKClippingComponent.h>
-#include <RenderCore/CKViewConfiguration.h>
-#include <ComponentKit/CKComponentInternal.h>
-#include <ComponentKit/CenterLayoutComponentBuilder.h>
-#include <ComponentKit/CKDataSource.h>
-#include <ComponentKit/CompositeComponentBuilder.h>
-#include <ComponentKit/CKIdValueWrapper.h>
-#include <ComponentKit/CKComponentScope.h>
-#include <ComponentTextKit/CKTextKitRenderer+Positioning.h>
-#include <RenderCore/CKNonNull.h>
-#include <ComponentKit/CKTrigger.h>
-#include <ComponentKit/CKComponentContext.h>
+#include <RenderCore/RCLayout.h> // C++: struct, shared_ptr
+#include <RenderCore/RCComponentSize.h> // C++: struct, namespace, class type
+#include <ComponentKit/CKIndexTransform.h> // C++: struct final, namespace
+#include <ComponentKit/CKComponent.h> // ObjC, imports
+#include <ComponentKit/BackgroundLayoutComponentBuilder.h> // C++: class, namespace, templates
+#include <ComponentKit/CKDataSourceConfigurationInternal.h> // C++: unordred_set, mostly ObjC though
+#include <ComponentKit/CKComponentScopeRoot.h> // C++: unordred_set, mostly ObjC
+#include <ComponentKit/CKCollectionViewDataSource.h> // ObjC
+#include <ComponentKit/CKButtonComponent.h> // C++: class and template class
+#include <ComponentKit/CKClippingComponent.h> // C++: namespaces, templates, classes, usings
+#include <RenderCore/CKViewConfiguration.h> // C++: struct, template
+#include <ComponentKit/CKComponentInternal.h> // ObjC
+#include <ComponentKit/CenterLayoutComponentBuilder.h> // C++: namespace, constexpr, using, template class
+#include <ComponentKit/CKDataSource.h> // ObjC
+#include <ComponentKit/CompositeComponentBuilder.h> // C++: namespace, constexpr, using, template class
+#include <ComponentKit/CKIdValueWrapper.h> // C++: Template functions
+#include <ComponentKit/CKComponentScope.h> // C++: class
+#include <ComponentTextKit/CKTextKitRenderer+Positioning.h> // ObjC
+#include <RenderCore/CKNonNull.h> // C++: template class, namespaces, template functions
+#include <ComponentKit/CKTrigger.h> // C++: structs, template classes
+#include <ComponentKit/CKComponentContext.h> // C++: Template classes
 #include <ComponentKit/CKRenderHelpers.h>
 #include <ComponentKit/CKStatefulViewComponentController.h>
 #include <ComponentTextKit/CKLabelComponent.h>
