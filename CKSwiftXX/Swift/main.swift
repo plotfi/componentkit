@@ -24,7 +24,7 @@ CK.CoalescedDidRenderRenderComponent()
 
 // RenderCore/CKDelayedNonNull.h
 
-// TODO: Template structs? 
+// TODO: Template structs?
 // let a = CK.DelayedInitialisationWrapper<Int32>()
 
 // ComponentKit/Core/CKWritingDirection.h
@@ -452,8 +452,100 @@ let CKTriggerScopedResponderAndKey_ = CKTriggerScopedResponderAndKey(Scoperespon
 // ComponentKit/CKComponentContext.h
 // TODO: Need template class instantuation
 
+// TODO: How do you construct and pass id<> types from Swift to ObjC?
+// ComponentKit/Core/Render/CKRenderHelpers.h
+// CKRender.ComponentTreeDiff.Iterable.build(
+
+// ComponentTextKit/CKLabelComponent.h
+let CKLabelAttributes_ = CKLabelAttributes()
+
+// ComponentKit/Core/CKComponentLayout.h
+var CKTreeLayoutCache_ = CKTreeLayoutCache()
+let match = CKTreeLayoutCache_.find(42)
+var CKComponentRootLayout_ = CKComponentRootLayout()
+let layoutSize = CKComponentRootLayout_.size()
+
+// RenderCore/Geometry/RCDimension.h
+var RCDim = RCRelativeDimension()
+let RCDimType = RCDim.type()
+
+// TODO: Why is Mutex not imported.
+// RenderCore/Utilities/CKMutex.h
+// let Mutex_ = CK.Mutex()
+
+// ComponentKit/Core/CKComponentAnimationsController.h
+let PendingAnimationsByComponentMap_ = CK.PendingAnimationsByComponentMap()
+var PendingAnimations_ = CK.PendingAnimations(PendingAnimationsByComponentMap_,
+                                              PendingAnimationsByComponentMap_,
+                                              PendingAnimationsByComponentMap_)
+let animationsFromPreviousComponent = PendingAnimations_.animationsFromPreviousComponent()
 
 
+// ComponentKit/CKComponentScopeHandle.h
+// Some odd template stuff with std::equal that seems difficult to connect with.
+
+// ComponentKit/CKTreeNode.h
+let CKComponentScopePair_ = CKComponentScopePair()
+let NodeCKComponentScopePair_ = CKComponentScopePair_.node
+
+// ComponentKit/CKComponentGenerator.h
+// TODO: Template types again are difficult here (CK::NonNull<id<CKComponentGeneratorDelegate>> etc)
+// let CKComponentGeneratorOptions_ = CKComponentGeneratorOptions()
+
+
+// RenderCore/CKComponentViewClass.h
+var CKComponentViewClassIdentifier_ = CKComponentViewClassIdentifier()
+let CKComponentViewClass_ = CKComponentViewClass()
+let hash_ = CKComponentViewClassIdentifier_.hash()
+var desc_ = CKComponentViewClassIdentifier_.description()
+let descStr = String(cString: desc_.c_str())
+
+
+
+// ComponentTextKit/CKTextKitRendererCache.h
+// Note: std::function call from Swift
+var ApplicationObserver_ = CK.TextKit.ApplicationObserver()
+var onLowMemory = ApplicationObserver_.onLowMemory
+onLowMemory()
+
+
+// ComponentKit/RatioLayoutComponentBuilder.h
+var RatioLayoutComponentBuilder_ = CK.RatioLayoutComponentBuilder()
+let ratio = CGFloat()
+// TODO: ratio not imported..
+// RatioLayoutComponentBuilder_.ratio(ratio)
+
+// ComponentKit/CKAnalyticsListener.h
+var ComponentTreeDiff_ = CK.ComponentTreeDiff()
+let ComponentTreeDiff_Desc = ComponentTreeDiff_.description()
+
+// ComponentKit/CKZStackComponent.h
+// TODO: Why is the full type not imported? Template instantiation?
+let ZStackComponentBuilder_ = CK.ZStackComponentBuilder()
+
+// ComponentKit/CKTransitionComponent.h
+// TODO: Make sure we can map Swift Optionls to CK Optional
+let hasTrigger_ = CK.BuilderDetails.TransitionComponentPropId.hasTrigger
+var c = CK.ComponentSpecContext()
+var ptr_c = withUnsafePointer(to: &c){$0}
+let TransitionComponentBuilder_ = CK.TransitionComponentBuilder(ptr_c)
+
+
+// RenderCore/CKComponentViewAttribute.h
+extension std.__1.string {
+  mutating func swift_string() -> String {
+    return Swift.String(cString: self.c_str()!)
+  }
+}
+let sel_ = Selector("a::::::")
+var CKComponentViewAttribute_ = CKComponentViewAttribute(sel_)
+let ident = CKComponentViewAttribute_.identifier.swift_string()
+var CKBoxedValue_ = CKBoxedValue(23)
+// TODO: operator() needs implementing
+// let id_ = CKBoxedValue_()
+var attributes = CKViewComponentAttributeValueMap()
+var ptr_attributes = withUnsafePointer(to: &attributes){$0}
+let PersistentAttributeShape_ = CK.Component.PersistentAttributeShape(ptr_attributes)
 
 
 

@@ -217,29 +217,29 @@
 #include <RenderCore/CKNonNull.h> // C++: template class, namespaces, template functions
 #include <ComponentKit/CKTrigger.h> // C++: structs, template classes
 #include <ComponentKit/CKComponentContext.h> // C++: Template classes
-#include <ComponentKit/CKRenderHelpers.h>
-#include <ComponentKit/CKStatefulViewComponentController.h>
-#include <ComponentTextKit/CKLabelComponent.h>
-#include <ComponentKit/CKComponentController.h>
-#include <RenderCore/CKMountable.h>
-#include <ComponentTextKit/CKTextKitAttributes.h>
-#include <ComponentKit/CKComponentLayout.h>
-#include <RenderCore/RCDimension.h>
-#include <RenderCore/CKMutex.h>
-#include <ComponentKit/CKComponentAnimationsController.h>
-#include <ComponentKit/CKComponentScopeHandle.h>
-#include <ComponentTextKit/CKAsyncTransaction.h>
-#include <ComponentKit/CKTreeNode.h>
-#include <ComponentKit/CKComponentGenerator.h>
-#include <RenderCore/CKComponentViewClass.h>
-#include <ComponentTextKit/CKTextKitRendererCache.h>
-#include <ComponentKit/RatioLayoutComponentBuilder.h>
-#include <ComponentKit/CKAnalyticsListener.h>
-#include <ComponentKit/CKZStackComponent.h>
-#include <ComponentKit/CKTransitionComponent.h>
-#include <RenderCore/CKCollection.h>
-#include <ComponentKit/CKComponentSubclass.h>
-#include <RenderCore/CKComponentViewAttribute.h>
+#include <ComponentKit/CKRenderHelpers.h> // C++: Namespaces, ObjC
+#include <ComponentKit/CKStatefulViewComponentController.h> // ObjC
+#include <ComponentTextKit/CKLabelComponent.h> // ObjC, structs
+#include <ComponentKit/CKComponentController.h> // ObjC
+#include <RenderCore/CKMountable.h> // ObjC
+#include <ComponentTextKit/CKTextKitAttributes.h> // ObjC
+#include <ComponentKit/CKComponentLayout.h> // C++: classes
+#include <RenderCore/RCDimension.h> // C++: structs, ctors etc
+#include <RenderCore/CKMutex.h> // C++: classes, templates, noexcept
+#include <ComponentKit/CKComponentAnimationsController.h> // C++: namespaces classes usings
+#include <ComponentKit/CKComponentScopeHandle.h> // C++ templated structs, ObjC mostly
+#include <ComponentTextKit/CKAsyncTransaction.h> // ObjC
+#include <ComponentKit/CKTreeNode.h> // ObjC, C++: some namespaces, structs
+#include <ComponentKit/CKComponentGenerator.h> // C++: struct with template type fields, ObjC
+#include <RenderCore/CKComponentViewClass.h> // C++: enum classes classes, std::string
+#include <ComponentTextKit/CKTextKitRendererCache.h> // C++: namespaces, structs, std::function
+#include <ComponentKit/RatioLayoutComponentBuilder.h> // C++: template class namespace
+#include <ComponentKit/CKAnalyticsListener.h> // C++: namespace, ObjC
+#include <ComponentKit/CKZStackComponent.h> // C++: namespaces templates classes
+#include <ComponentKit/CKTransitionComponent.h> // C++: namespace, constexpr, template
+#include <RenderCore/CKCollection.h> // C++: Way too many templated things
+#include <ComponentKit/CKComponentSubclass.h> // ObjC
+#include <RenderCore/CKComponentViewAttribute.h> // C++: namepaces classes templates usings noexcept
 #include <RenderCore/ComponentViewManager.h>
 #include <ComponentKit/CKComponentActionInternal.h>
 #include <RenderCore/CKFunctionalHelpers.h>
