@@ -547,13 +547,87 @@ var attributes = CKViewComponentAttributeValueMap()
 var ptr_attributes = withUnsafePointer(to: &attributes){$0}
 let PersistentAttributeShape_ = CK.Component.PersistentAttributeShape(ptr_attributes)
 
+// RenderCore/ComponentViewManager.h
+// TODO: the AnyClass causes a crasher?
+var OptimisticViewMutationInfo_ = CK.Component.OptimisticViewMutationInfo()
+let serial = OptimisticViewMutationInfo_.serial
+let undo = OptimisticViewMutationInfo_.undo
+let apply = OptimisticViewMutationInfo_.apply
+let load = OptimisticViewMutationInfo_.load
+var viewClassIdentifier_ = CKComponentViewClassIdentifier()
+// TODO: the AnyClass causes a crasher?
+// var ViewKey_ = CK.Component.ViewKey(componentClass: NSString.self,
+//                                     viewClassIdentifier: viewClassIdentifier_,
+//                                     attributeShape: PersistentAttributeShape_)
+// TODO: Why is ViewReusePool not being imported??
+//let ViewReusePool_ = CK.Component.ViewReusePool()
 
 
+// ComponentKit/CKComponentActionInternal.h
+// TODO: CKActionBase not imported
+// let CKActionBase_ = CKActionBase()
+// TODO: _CKTypedComponentDebugInitialTarget does not have accesible initializers
+// let _CKTypedComponentDebugInitialTarget_ = _CKTypedComponentDebugInitialTarget()
+var CKActionInfo_ = CKActionInfo()
+let imp = CKActionInfo_.imp
+let responder = CKActionInfo_.responder
+// TODO: Another crasher
+// let CKActionFind_ = CKActionFind(sel_, NSString.self)
+
+// RenderCore/CKFunctionalHelpers.h
+// TODO: All template functions and classes, nothing to call
+
+// RenderCore/RCEqualityHelpers.h
+let RCHashCombine_ = RCHashCombine(1, 2)
+let DummyString = "Hello"
+let RCHashCString_ = RCHashCString(DummyString.cString(using: String.Encoding.ascii))
+let RCHash64ToNative_ = RCHash64ToNative(23)
 
 
+// ComponentKit/AutoSizedImageComponentBuilder.h
+let max_123 = CK.BuilderDetails.AutoSizedImageComponentPropId.__max
+let AutoSizedImageComponentBuilderEmpty_ = CK.AutoSizedImageComponentBuilderEmpty()
+
+// ComponentKit/InsetComponentBuilder.h
+// DITTO: Nothing interesting compared to previous header, still need some templates
+
+// ComponentKit/CKAction.h
+// TODO: templates all the way
+
+// ComponentKit/CKFlexboxComponent.h
+var CKFlexboxBorderDimension_ = CKFlexboxBorderDimension()
+let isDefined = CKFlexboxBorderDimension_.isDefined()
+let value_ = CKFlexboxBorderDimension_.value()
+var CKFlexboxDimension_ = CKFlexboxDimension()
+let dim_ = CKFlexboxDimension_.dimension()
 
 
+// ComponentKit/CKAnimation.h
+var CTRLP1 = CK.Animation.TimingCurve.ControlPoint()
+var CTRLP2 = CK.Animation.TimingCurve.ControlPoint()
+var TimingCurve_ = CK.Animation.TimingCurve(CTRLP1, CTRLP2)
+let CA_ = TimingCurve_.toCA()
+// TODO: No accesible initializers
+// let initial_ = CK.Animation.Initial()
+// TODO: let initial_ = CK.Animation.InitialBuilder()
+// TODO: More template instantiation trouble
+// let SequenceBuilder_ = CK.Animation.SequenceBuilder()
 
+/// TODO: extremely template heavy headers
+/// ComponentTextKit/CKCacheImpl.h
+/// RenderCore/CKVariant.h
+/// ComponentKit/ButtonComponentBuilder.h
+/// RenderCore/CKOptional.h
+
+/// ComponentKit/ComponentBuilder.h
+var ViewConfig_ = CK.ViewConfig()
+let built_ = ViewConfig_.build()
+
+/// ComponentKit/FlexboxComponentBuilder.h
+var FlexboxComponent_ = CK.FlexboxComponentBuilderEmpty()
+var foo : CGFloat = 23.0
+// TODO: spacing missing
+// let spacing = FlexboxComponent_.spacing(foo)
 
 
 print("Done.")

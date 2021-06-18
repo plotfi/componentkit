@@ -240,20 +240,20 @@
 #include <RenderCore/CKCollection.h> // C++: Way too many templated things
 #include <ComponentKit/CKComponentSubclass.h> // ObjC
 #include <RenderCore/CKComponentViewAttribute.h> // C++: namepaces classes templates usings noexcept
-#include <RenderCore/ComponentViewManager.h>
-#include <ComponentKit/CKComponentActionInternal.h>
-#include <RenderCore/CKFunctionalHelpers.h>
-#include <RenderCore/RCEqualityHelpers.h>
-#include <ComponentKit/AutoSizedImageComponentBuilder.h>
-#include <ComponentKit/InsetComponentBuilder.h>
-#include <ComponentKit/CKAction.h>
-#include <ComponentKit/ImageComponentBuilder.h>
-#include <ComponentKit/CKFlexboxComponent.h>
-#include <ComponentKit/CKAnimation.h>
-#include <ComponentTextKit/CKCacheImpl.h>
-#include <RenderCore/CKVariant.h>
-#include <ComponentKit/ButtonComponentBuilder.h>
-#include <RenderCore/CKOptional.h>
-#include <ComponentKit/ComponentBuilder.h>
-#include <ComponentKit/FlexboxComponentBuilder.h>
+#include <RenderCore/ComponentViewManager.h> // C++: structs class namespaces
+#include <ComponentKit/CKComponentActionInternal.h> // C++: classes templates etc
+#include <RenderCore/CKFunctionalHelpers.h> // C++: namespaces template classes template functions
+#include <RenderCore/RCEqualityHelpers.h> // templates namespaces classes struct
+#include <ComponentKit/AutoSizedImageComponentBuilder.h> // C++: templates, classes namespaces
+#include <ComponentKit/InsetComponentBuilder.h> // C++: templates, classes namespaces
+#include <ComponentKit/CKAction.h> // C++: templates all the way
+#include <ComponentKit/ImageComponentBuilder.h> // C++: ditto
+#include <ComponentKit/CKFlexboxComponent.h> // C++: classes, templates, namespace
+#include <ComponentKit/CKAnimation.h> // C++: classes templates namespaces
+#include <ComponentTextKit/CKCacheImpl.h> // C++: templates templates templates
+#include <RenderCore/CKVariant.h> // C++: templates templates templates
+#include <ComponentKit/ButtonComponentBuilder.h> // C++: templates templates templates
+#include <RenderCore/CKOptional.h> // C++: templates templates templates
+#include <ComponentKit/ComponentBuilder.h> // C++: templates templates templates
+#include <ComponentKit/FlexboxComponentBuilder.h> // C++: templates templates templates
 #endif
